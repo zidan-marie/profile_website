@@ -1,780 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- aos -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/stylesheet/app.css" />
-    <link rel="stylesheet" href="assets/stylesheet/responsive.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css"
-    />
-    <link rel="shortcut icon" href="assets/img/logo.png" />
-    <title>MyProfile</title>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <ul class="nav justify-content-center bg-light fixed-top">
-      <li class="nav-item">
-        <!-- <a class="nav-link" href="#"> -->
-        <a
-          class="buttonToggle"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions"
-          ><i class="fas fa-bars toggleSlide"></i
-        ></a>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
+    rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/stylesheet/app.css" />
+  <link rel="stylesheet" href="assets/stylesheet/responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+  <link rel="shortcut icon" href="assets/img/logo.png" />
+  <title>MyProfile</title>
+</head>
 
-        <div
-          class="offcanvas offcanvas-start"
-          data-bs-scroll="true"
-          tabindex="-1"
-          id="offcanvasWithBothOptions"
-          aria-labelledby="offcanvasWithBothOptionsLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              Please select a menu :
-            </h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul>
-              <li>
-                <a class="nav-link" href="#Biodata">Biodata</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Achievements">Achievements</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Projects">Projects</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Certifications">Certifications</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Contact">Contact</a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <ul class="nav justify-content-center bg-light fixed-top">
+    <li class="nav-item">
+      <!-- <a class="nav-link" href="#"> -->
+      <a class="buttonToggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions"><i class="fas fa-bars toggleSlide"></i></a>
+
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+            Please select a menu :
+          </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <!-- </a> -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link initial" href="#" aria-current="page">Marr</a>
-      </li>
-
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Biodata">Biodata</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Achievements">Achievements</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Projects">Projects</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Certifications">Certifications</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Contact">Contact</a>
-      </li>
-    </ul>
-    <div class="all-body-cover">
-      <img
-        width="200px"
-        src="assets/img/profile.jpg"
-        class="img-thumbnail rounded-circle mx-auto d-block"
-        alt="..."
-      />
-      <div class="nama">
-        <h4 class="text-center fw-bold">Muhammad Mar'ie Muhyiddin</h4>
-        <h5 class="text-center">Freshgraduate Universitas Dian Nuswantoro || UI/UX Designer || Junior Mobile Web Developer</h5>
-        <br>
-        <a class="btn btn-danger mx-info" href="https://drive.google.com/file/d/18xd7cBU0wpcZf04gme6ARjt-OxYBEVju/view?usp=sharing" role="button"
-                    >Portofolio
-                    </a><br><br>
+        <div class="offcanvas-body">
+          <ul>
+            <li>
+              <a class="nav-link" href="#Biodata">Biodata</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Achievements">Achievements</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Projects">Projects</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Certifications">Certifications</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <!-- </a> -->
+    </li>
+    <li class="nav-item">
+      <a class="nav-link initial" href="#" aria-current="page">Marr</a>
+    </li>
 
-      <br><br><svg
-        class="waves"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,160L48,149.3C96,139,192,117,288,144C384,171,480,245,576,272C672,299,768,277,864,250.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <div class="firstContainer">
-        <div class="content">
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="800"
-            id="Biodata"
-            class="nameHeading fw-bold"
-          >
-            BIODATA
-          </h2>
-          <div class="container text-center">
-            <div class="row">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-4 mb-2"
-              >
-              Hello my name is Muhammad Mar'ie Muhyiddin usually called Mar'ie. I am a beginner programmer of website and mobile developer using JavaScript and PHP technology. I am a new graduate student from Dian Nuswantoro University Semarang majoring in D3 Informatics Engineering, Faculty of Computer Science.
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-4 mb-2"
-              >
-                <h4 class="subNameHeading fw-bold">EDUCATION</h4>
-                <div class="education">
-                  <!-- Button trigger modal -->
-                  <p class="startEnd">Started on July 2008</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal1"
-                  >
-                    SDN Ngelowetan
-                  </button>
+    <li class="nav-item-item">
+      <a class="nav-link" href="#Biodata">Biodata</a>
+    </li>
+    <li class="nav-item-item">
+      <a class="nav-link" href="#Achievements">Achievements</a>
+    </li>
+    <li class="nav-item-item">
+      <a class="nav-link" href="#Projects">Projects</a>
+    </li>
+    <li class="nav-item-item">
+      <a class="nav-link" href="#Certifications">Certifications</a>
+    </li>
+    <li class="nav-item-item">
+      <a class="nav-link" href="#Contact">Contact</a>
+    </li>
+  </ul>
+  <div class="all-body-cover">
+    <img width="200px" src="assets/img/profile.jpg" class="img-thumbnail rounded-circle mx-auto d-block" alt="..." />
+    <div class="nama">
+      <h4 class="text-center fw-bold">Muhammad Mar'ie Muhyiddin</h4>
+      <h5 class="text-center">Fullstack Developer || UI/UX Designer || Junior Mobile Web Developer</h5>
+      <br>
+      <a class="btn btn-danger mx-info"
+        href="https://drive.google.com/file/d/1hlK9g5O8lZg5SVzpXKB7-uaCTKU2nQdS/view?usp=sharing" role="button">Download
+        CV
+      </a><br><br>
+    </div>
 
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal1"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Maps
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body " style="display: flex;" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4095409251413!2d110.71827927517988!3d-6.841406366926442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c287534d399d%3A0xb81f5328390eae8d!2sSDN%20Ngelowetan!5e0!3m2!1sid!2sid!4v1689761332381!5m2!1sid!2sid" 
-                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
+    <br><br><svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,160L48,149.3C96,139,192,117,288,144C384,171,480,245,576,272C672,299,768,277,864,250.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+    <div class="firstContainer">
+      <div class="content">
+        <h2 data-aos="fade-up" data-aos-duration="800" id="Biodata" class="nameHeading fw-bold">
+          BIODATA
+        </h2>
+        <div class="container text-center">
+          <div class="row">
+            <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4 mb-2">
+              Hello, my name is Muhammad Mar'ie Muhyiddin, usually called Mar'ie. I am a beginner programmer currently
+              working as a full-stack developer developing the DEPOS finance website system. My expertise includes
+              mobile applications, QGIS, and website mapping. In my coding, I frequently use Laravel, CI, JavaScript,
+              and PHP, and for mobile, Flutter and Dart. The databases I use are MySQL and PostgreSQL. I graduated from
+              Dian Nuswantoro University in Semarang, majoring in Computer Science, Faculty of Computer Science.
+            </div>
+            <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4 mb-2">
+              <h4 class="subNameHeading fw-bold">EDUCATION</h4>
+              <div class="education">
+                <!-- Button trigger modal -->
+                <p class="startEnd">Started on July 2008</p>
+                <button type="button" class="btn btn-danger itemEdu" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal1">
+                  SDN Ngelowetan
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Maps
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body " style="display: flex;"><iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4095409251413!2d110.71827927517988!3d-6.841406366926442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c287534d399d%3A0xb81f5328390eae8d!2sSDN%20Ngelowetan!5e0!3m2!1sid!2sid!4v1689761332381!5m2!1sid!2sid"
+                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Close
+                        </button>
                       </div>
                     </div>
                   </div>
-                  <p class="startEnd">Finished on June 2014</p>
-                  <i class="fas fa-arrow-circle-down itemEdu"></i>
-                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
-                  <p class="startEnd">Started on July 2014</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2"
-                  >
-                    SMPN 1 Mijen
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal2"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Maps
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body" style="display: flex;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15846.763679237181!2d110.71712014905148!3d-6.807401091040578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c27a542d19b5%3A0xd12074d051ffb164!2sSMP%20Negeri%201%20Mijen!5e0!3m2!1sid!2sid!4v1689762246304!5m2!1sid!2sid" 
-                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="startEnd">Finished on June 2017</p>
-                  <i class="fas fa-arrow-circle-down itemEdu"></i>
-                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
-                  <p class="startEnd">Started on July 2017</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal3"
-                  >
-                    SMAN 1 Mijen
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal3"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Maps
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body" style="display: flex;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.932879064369!2d110.71534104905504!3d-6.832518390646186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c28433cdb121%3A0x1bee7ef1ef26d5c!2sSMA%20Negeri%201%20Mijen!5e0!3m2!1sid!2sid!4v1689762361491!5m2!1sid!2sid" 
-                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="startEnd">Finished on June 2020</p>
-                  <i class="fas fa-arrow-circle-down itemEdu"></i>
-                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
-                  <p class="startEnd">Started on July 2021</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal4"
-                  >
-                    University Dian Nuswantoro
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal4"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Maps
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body" style="display: flex;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15840.904133754944!2d110.39890104907683!3d-6.9826315882908885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4ec52229d7%3A0xc791d6abc9236c7!2sUniversitas%20Dian%20Nuswantoro!5e0!3m2!1sid!2sid!4v1689762643637!5m2!1sid!2sid" 
-                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="startEnd">Finished on November 2024</p>
                 </div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4">
-                My hobbies are coding, reading and listening to music, 
-                I am also trying to develop skills to become a freelancer, 
-                I have a freelance account selling design and making animations 
-                to develop an interest in the world of information technology.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- second -->
-    <div class="secondContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Achievements"
-        class="achive fw-bold"
-      >
-        ACHIEVEMENTS
-      </h2>
-      <div class="container mx-auto">
-        <div class="row">
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Organization</div>
-              <div class="card-body">
-                <h5 class="card-title">HMDTI UDINUS</h5>
-                <p class="card-text">
-                  Building good public relations with faculties and universities
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Competence</div>
-              <div class="card-body">
-                <h5 class="card-title">INSCOM 2023</h5>
-                <p class="card-text">
-                  Building a Creative Digital Economy and Social Life in The Era of Technology
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Technique</div>
-              <div class="card-body">
-                <h5 class="card-title">Programming Concept</h5>
-                <p class="card-text">
-                  Able to apply the concept of MVC and Clean Code to the
-                  program.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">System Design</div>
-              <div class="card-body">
-                <h5 class="card-title">Navicat & Draw.io</h5>
-                <p class="card-text">
-                  Creation of system design from UML and ERD.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Back-end Developer</div>
-              <div class="card-body">
-                <h5 class="card-title">JavaScript & PHP</h5>
-                <p class="card-text">
-                  Able to create websites with JavaScript & PHP technology.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Front-end Developer</div>
-              <div class="card-body">
-                <h5 class="card-title">Bootstrap</h5>
-                <p class="card-text">
-                  Framework to make it easier to create websites quickly and easily.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Framework</div>
-              <div class="card-body">
-                <h5 class="card-title">CI3, Laravel, Flutter</h5>
-                <p class="card-text">
-                  Framework of php and javascript for web and mobile development.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Design UI/UX</div>
-              <div class="card-body">
-                <h5 class="card-title">Figma & Canva</h5>
-                <p class="card-text">
-                  Design framework of website and mobile.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- third -->
-    <svg
-      class="wavesss"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,0L48,53.3C96,107,192,213,288,234.7C384,256,480,192,576,181.3C672,171,768,213,864,245.3C960,277,1056,299,1152,298.7C1248,299,1344,277,1392,266.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="thirdContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Projects"
-        class="projects fw-bold"
-      >
-        PROJECTS
-      </h2>
-      <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  #
-                >
-                  <div class="article-img-holder-firstRow" style="color:black;">E-Commerce</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-      <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  #
-                >
-                  <div class="article-img-holder-secondRow" style="color:white; ">E-marketplace</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-    <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  #
-                >
-                  <div class="article-img-holder-thirdRow" style="color:black;">QGis Website</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-      <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  href="https://www.figma.com/design/BKKMyGIeNUs33v0No2PlFA/Desain-UI%2FUX-RumahRaga?node-id=922-96&t=O2FK7lQ7KCu3gVKk-1"
-                  style="text-decoration: none"
-                  target="_blank"
-                >
-                  <div class="article-img-holder-fourdRow" style="color:black;">Design UI/UX</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-      <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  href="https://drive.google.com/file/d/1VIq4AxlKveJwdkYAZ5bfI0PoMvubHsIl/view?usp=sharing"
-                  style="text-decoration: none"
-                  target="_blank"
-                >
-                  <div class="article-img-holder-fiveRow" style="color:black;">Design Diagram</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-      </div>
-    <svg
-      class="botWaves"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,181.3C672,181,768,235,864,229.3C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      ></path>
-    </svg>
-    <div class="fourthContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Certifications"
-        class="achive text-center fw-bold"
-      >
-        CERTIFICATION
-      </h2>
-      <div class="container">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="800"
-          class="table-responsive"
-        >
-          <table class="table mx-auto table-hover table-light table-striped">
-            <thead>
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Organizer</th>
-                <th scope="col">Date</th>
-                <th scope="col">Credential</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Building a Creative Digital</td>
-                <td>INSCOM 2023</td>
-                <td>March 8, 2023</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1ak8PWUooTi5AJuPjBciEUK-SDvW2urpP/view?usp=sharing" role="button"
-                    >View
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Precision Technopreneurship</td>
-                <td>WMK Udinus</td>
-                <td>December 15, 2023</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1aQoRRHYONExOtbv1oLgFfDDUkV_-qbKt/view?usp=sharing" role="button"
-                    >View
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Teknis Pelindungan Hak Cipta</td>
-                <td>DJKI Kemenkumham</td>
-                <td>October 10, 2023</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/16K2cN9qt2hAdgHG0PsM2Wmx4pmtPKHtX/view?usp=sharing" role="button"
-                    >View
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Certificate TOEFL</td>
-                <td>Infinity English Learning</td>
-                <td>June 22, 2024</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1AkFF7L620dOBEMwPwYb3euxdGDhhd_tg/view?usp=sharing" role="button"
-                    >View
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Certificate TOEFL</td>
-                <td>CFLT Udinus</td>
-                <td>July 17, 2024</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1ZAPVH5pJfG7-yNaaVcliRKAsbJfWkvj6/view?usp=sharing" role="button"
-                    >View
-                    </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <svg
-      class="wavesContact"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,32L60,58.7C120,85,240,139,360,133.3C480,128,600,64,720,69.3C840,75,960,149,1080,154.7C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="fivethContainer">
-      <h2 id="Contact" class="contactMe fw-bold">CONTACT</h2>
-      <div class="container">
-        <div class="linkSosmed">
-          <a class="itemSosmed" target="_blank" href="https://www.linkedin.com/in/muhammad-mar-ie-441529247"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a class="itemSosmed" target="_blank" href="https://www.instagram.com/zidan_mariee/"            
-          ><i class="fab fa-instagram"></i
-          ></a>
-          <a class="itemSosmed" target="_blank" href="https://www.fiverr.com/marr06"
-            ><i class="fa-solid fa-circle-info"></i
-          ></a>
-          <a class="itemSosmed" target="_blank" href="https://youtube.com/@mariemuhyiddin1517"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a class="itemSosmed" target="_blank" href="mailto:zidan.muhyiddin@gmail.com"
-            ><i class="fa fa-envelope"></i
-          ></a>
-          <a class="itemSosmed" target="_blank" href="https://github.com/zidan-marie"
-            ><i class="fab fa-github"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-    <script src="assets/stylesheet/app.js"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
+                <p class="startEnd">Finished on June 2014</p>
+                <i class="fas fa-arrow-circle-down itemEdu"></i>
+                <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                <p class="startEnd">Started on July 2014</p>
+                <button type="button" class="btn btn-danger itemEdu" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2">
+                  SMPN 1 Mijen
+                </button>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Maps
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body" style="display: flex;"><iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15846.763679237181!2d110.71712014905148!3d-6.807401091040578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c27a542d19b5%3A0xd12074d051ffb164!2sSMP%20Negeri%201%20Mijen!5e0!3m2!1sid!2sid!4v1689762246304!5m2!1sid!2sid"
+                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="startEnd">Finished on June 2017</p>
+                <i class="fas fa-arrow-circle-down itemEdu"></i>
+                <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                <p class="startEnd">Started on July 2017</p>
+                <button type="button" class="btn btn-danger itemEdu" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3">
+                  SMAN 1 Mijen
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Maps
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body" style="display: flex;"><iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.932879064369!2d110.71534104905504!3d-6.832518390646186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c28433cdb121%3A0x1bee7ef1ef26d5c!2sSMA%20Negeri%201%20Mijen!5e0!3m2!1sid!2sid!4v1689762361491!5m2!1sid!2sid"
+                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="startEnd">Finished on June 2020</p>
+                <i class="fas fa-arrow-circle-down itemEdu"></i>
+                <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                <p class="startEnd">Started on July 2021</p>
+                <button type="button" class="btn btn-danger itemEdu" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal4">
+                  University Dian Nuswantoro
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Maps
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body" style="display: flex;"><iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15840.904133754944!2d110.39890104907683!3d-6.9826315882908885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4ec52229d7%3A0xc791d6abc9236c7!2sUniversitas%20Dian%20Nuswantoro!5e0!3m2!1sid!2sid!4v1689762643637!5m2!1sid!2sid"
+                          width="450" height="450" style="border:0;" allowfullscreen="" loading="fast"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="startEnd">Finished on November 2024</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4">
+              My hobbies are coding, reading and listening to music,
+              I am also trying to develop skills to become a freelancer,
+              I have a freelance account selling design and making animations
+              to develop an interest in the world of information technology.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- second -->
+  <div class="secondContainer">
+    <h2 data-aos="fade-up" data-aos-duration="800" id="Achievements" class="achive fw-bold">
+      ACHIEVEMENTS
+    </h2>
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Organization</div>
+            <div class="card-body">
+              <h5 class="card-title">HMDTI UDINUS</h5>
+              <p class="card-text">
+                Building good public relations with faculties and universities
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Competence</div>
+            <div class="card-body">
+              <h5 class="card-title">INSCOM 2023</h5>
+              <p class="card-text">
+                Building a Creative Digital Economy and Social Life in The Era of Technology
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Technique</div>
+            <div class="card-body">
+              <h5 class="card-title">Programming Concept</h5>
+              <p class="card-text">
+                Able to apply the concept of MVC and Clean Code to the
+                program.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">System Design</div>
+            <div class="card-body">
+              <h5 class="card-title">Navicat & Draw.io</h5>
+              <p class="card-text">
+                Creation of system design from UML and ERD.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Back-end Developer</div>
+            <div class="card-body">
+              <h5 class="card-title">JavaScript & PHP</h5>
+              <p class="card-text">
+                Able to create websites with JavaScript & PHP technology.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Front-end Developer</div>
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap</h5>
+              <p class="card-text">
+                Framework to make it easier to create websites quickly and easily.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Framework</div>
+            <div class="card-body">
+              <h5 class="card-title">CI3, Laravel, Flutter</h5>
+              <p class="card-text">
+                Framework of php and javascript for web and mobile development.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="card text-dark mb-3 mx-auto" style="max-width: 18rem">
+            <div class="card-header">Design UI/UX</div>
+            <div class="card-body">
+              <h5 class="card-title">Figma & Canva</h5>
+              <p class="card-text">
+                Design framework of website and mobile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- third -->
+  <svg class="wavesss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#ffffff" fill-opacity="1"
+      d="M0,0L48,53.3C96,107,192,213,288,234.7C384,256,480,192,576,181.3C672,171,768,213,864,245.3C960,277,1056,299,1152,298.7C1248,299,1344,277,1392,266.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+  <div class="thirdContainer">
+    <h2 data-aos="fade-up" data-aos-duration="800" id="Projects" class="projects fw-bold">
+      PROJECTS
+    </h2>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a #>
+                <div class="article-img-holder-firstRow" style="color:black;">E-Commerce</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a #>
+                <div class="article-img-holder-secondRow" style="color:white; ">E-marketplace</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a #>
+                <div class="article-img-holder-thirdRow" style="color:black;">QGis Website</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a href="https://www.figma.com/design/BKKMyGIeNUs33v0No2PlFA/Desain-UI%2FUX-RumahRaga?node-id=922-96&t=O2FK7lQ7KCu3gVKk-1"
+                style="text-decoration: none" target="_blank">
+                <div class="article-img-holder-fourdRow" style="color:black;">Design UI/UX</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a href="https://drive.google.com/file/d/1VIq4AxlKveJwdkYAZ5bfI0PoMvubHsIl/view?usp=sharing"
+                style="text-decoration: none" target="_blank">
+                <div class="article-img-holder-fiveRow" style="color:black;">Design Diagram</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="categoryy">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div data-aos="fade-up" data-aos-duration="800" class="col">
+            <div class="article-container-firstRow text-uppercase mx-auto">
+              <a href="http://oss.nexis.id"
+                style="text-decoration: none" target="_blank">
+                <div class="article-img-holder-sixRow" style="color:black;">OSS System</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+  </div>
+  <svg class="botWaves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#ffffff" fill-opacity="1"
+      d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,181.3C672,181,768,235,864,229.3C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+    </path>
+  </svg>
+  <div class="fourthContainer">
+    <h2 data-aos="fade-up" data-aos-duration="800" id="Certifications" class="achive text-center fw-bold">
+      CERTIFICATION
+    </h2>
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="800" class="table-responsive">
+        <table class="table mx-auto table-hover table-light table-striped">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Organizer</th>
+              <th scope="col">Date</th>
+              <th scope="col">Credential</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Building a Creative Digital</td>
+              <td>INSCOM 2023</td>
+              <td>March 8, 2023</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1ak8PWUooTi5AJuPjBciEUK-SDvW2urpP/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Precision Technopreneurship</td>
+              <td>WMK Udinus</td>
+              <td>December 15, 2023</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1aQoRRHYONExOtbv1oLgFfDDUkV_-qbKt/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Teknis Pelindungan Hak Cipta</td>
+              <td>DJKI Kemenkumham</td>
+              <td>October 10, 2023</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/16K2cN9qt2hAdgHG0PsM2Wmx4pmtPKHtX/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Uji Kompetensi Keahlian "Pemrograman Web"</td>
+              <td>Asosiasi Profesi Telematika Indonesia</td>
+              <td>February 26, 2024</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1ljQrGeg59214HL5DFWIX8SvrwT316KjC/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Skema Sertifikasi Okupasi Pemrogram Mobil Pratama</td>
+              <td>Badan Nasional Sertifikasi Profesi</td>
+              <td>September 17, 2024</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1kQ94UXGRWSig6Q-pyfVHUXkCBJ_FyqbF/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Certificate TOEFL</td>
+              <td>Infinity English Learning</td>
+              <td>June 22, 2024</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1AkFF7L620dOBEMwPwYb3euxdGDhhd_tg/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Certificate TOEFL</td>
+              <td>CFLT Udinus</td>
+              <td>July 17, 2024</td>
+              <td>
+                <a class="btn btn-primary mx-info"
+                  href="https://drive.google.com/file/d/1ZAPVH5pJfG7-yNaaVcliRKAsbJfWkvj6/view?usp=sharing"
+                  role="button">View
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <svg class="wavesContact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#ffffff" fill-opacity="1"
+      d="M0,32L60,58.7C120,85,240,139,360,133.3C480,128,600,64,720,69.3C840,75,960,149,1080,154.7C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+    </path>
+  </svg>
+  <div class="fivethContainer">
+    <h2 id="Contact" class="contactMe fw-bold">CONTACT</h2>
+    <div class="container">
+      <div class="linkSosmed">
+        <a class="itemSosmed" target="_blank" href="https://www.linkedin.com/in/muhammad-mar-ie-441529247"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a class="itemSosmed" target="_blank" href="https://www.instagram.com/zidan_mariee/"><i
+            class="fab fa-instagram"></i></a>
+        <a class="itemSosmed" target="_blank" href="https://www.fiverr.com/marr06"><i
+            class="fa-solid fa-circle-info"></i></a>
+        <a class="itemSosmed" target="_blank" href="https://youtube.com/@mariemuhyiddin1517"><i
+            class="fab fa-youtube"></i></a>
+        <a class="itemSosmed" target="_blank" href="mailto:zidan.muhyiddin@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a class="itemSosmed" target="_blank" href="https://github.com/zidan-marie"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+  <script src="assets/stylesheet/app.js"></script>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
